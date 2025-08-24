@@ -36,7 +36,23 @@ public class HomePage extends BasePage {
     WebElement newWindow;
 
     public NewWindowPage clickOnMultipleWindowPage() {
-        clickWithJS(newWindow, 0,900);
+        clickWithJS(newWindow, 0, 900);
         return new NewWindowPage(driver);
+    }
+
+    @FindBy(css = "a[href='/nested_frames']")
+    WebElement nestedFramesLink;
+
+    public NestedFramePage clickOnNestedFramesPage() {
+        clickWithJS(nestedFramesLink, 0, 900);
+        return new NestedFramePage(driver);
+    }
+
+    @FindBy(css = "a[href='/dropdown']")
+    WebElement dropDownLink;
+
+    public DropDownPage clickOnDropDownPage() {
+        clickWithJS(dropDownLink, 0, 200);
+        return new DropDownPage(driver);
     }
 }
