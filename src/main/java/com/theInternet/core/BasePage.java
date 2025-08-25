@@ -75,4 +75,17 @@ public class BasePage {
         return new WebDriverWait(driver, Duration.ofSeconds(time));
     }
 
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void waitAndScroll(int millis, int x, int y) {
+        pause(millis);
+        scrollWithJS(x, y);
+    }
+
 }

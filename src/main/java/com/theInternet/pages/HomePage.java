@@ -55,4 +55,12 @@ public class HomePage extends BasePage {
         clickWithJS(dropDownLink, 0, 200);
         return new DropDownPage(driver);
     }
+
+    @FindBy(css = "a[href='/horizontal_slider']")
+    WebElement sliderPageLink;
+
+    public SliderPage clickOnSliderPage() {
+        clickWithJS(sliderPageLink, 0, 300);
+        return new SliderPage(driver);
+    }
 }
