@@ -63,4 +63,12 @@ public class HomePage extends BasePage {
         clickWithJS(sliderPageLink, 0, 300);
         return new SliderPage(driver);
     }
+
+    @FindBy(css = "a[href='/context_menu']")
+    WebElement contextMenu;
+
+    public ContextMenuPage clickOnContextMenu() {
+        click(contextMenu);
+        return new ContextMenuPage(driver);
+    }
 }

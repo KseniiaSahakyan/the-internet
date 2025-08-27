@@ -13,9 +13,14 @@ public class DropDownTest extends TestBase {
     @BeforeEach
     public void precondition() {
         dropDownPage = new DropDownPage(driver);
+        HomePage homePage = getHomePage();
+        homePage.clickOnDropDownPage();
+    }
+
+    private HomePage getHomePage() {
         HomePage homePage = new HomePage(driver);
         homePage.goToHomePage();
-        homePage.clickOnDropDownPage();
+        return homePage;
     }
 
     @Test
