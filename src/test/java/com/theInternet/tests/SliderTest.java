@@ -5,6 +5,7 @@ import com.theInternet.pages.HomePage;
 import com.theInternet.pages.SliderPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class SliderTest extends TestBase {
@@ -20,6 +21,7 @@ public class SliderTest extends TestBase {
     }
 
     @Test
+    @Tag("demo")
     public void moveSliderToTwoPointFive() {
         sliderPage.moveSliderTo("2.5");
         Assertions.assertEquals("2.5", sliderPage.getSliderValue());

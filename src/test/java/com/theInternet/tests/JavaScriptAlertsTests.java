@@ -4,6 +4,7 @@ import com.theInternet.core.TestBase;
 import com.theInternet.pages.HomePage;
 import com.theInternet.pages.JavaScriptAlertsPage;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class JavaScriptAlertsTests extends TestBase {
@@ -34,6 +35,7 @@ public class JavaScriptAlertsTests extends TestBase {
     }
 
     @Test
+    @Tag("demo")
     public void sendMessageToAlertTest() {
         javaScriptAlert.clickOnJSPromtButton();
         javaScriptAlert.sendMessageToAlert("Hello world!!!")

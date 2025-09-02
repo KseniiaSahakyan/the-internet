@@ -71,4 +71,12 @@ public class HomePage extends BasePage {
         click(contextMenu);
         return new ContextMenuPage(driver);
     }
+
+    @FindBy(css = "a[href='/upload']")
+    WebElement fileUploadLink;
+
+        public UploadPage clickOnFileUploadPage() {
+        click(fileUploadLink);
+        return new UploadPage(driver);
+    }
 }
